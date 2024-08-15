@@ -1,0 +1,16 @@
+addVenue "Golf National" "Saint-Quentin-en-Yvelines" 10000
+addVenue "Nice Stadium" "Nice" 30000
+showVenues
+delVenue "Golf National"
+addEvent "Nice Stadium" 5 6 10 "Football"
+addEvent "Nice Stadium" 5 13 17 "Basketball"
+delEvent "Nice Stadium" 5 6 "Football" 
+showevents "Nice Stadium" 5
+addVenue "Pont Alexandre III" "Paris" 10000
+addVenue "Porte de La Chapelle Arena" "Paris" 10000
+showVenues 
+addEvent "Pont Alexandre III" 23 7 11 "Cycling Road"
+addEvent "Porte de La Chapelle Arena" 7 10 15 "Badminton"
+addEvent "Porte de La Chapelle Arena" 15 22 25 "Gymnastics"
+showCalendar "Porte de La Chapelle Arena"
+End

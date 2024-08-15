@@ -1,0 +1,8 @@
+addVenue "Golf National" "Saint-Quentin-en-Yvelines" 10000
+addVenue "Nice Stadium" "Nice" 30000
+showVenues
+addEvent "Golf National" 35 2 6 "Golf"
+addEvent "Nice Stadium" 5 6 10 "Football"
+addEvent "Nice Stadium" 5 17 13 "Basketball"
+showevents "Nice Stadium" 5
+End
