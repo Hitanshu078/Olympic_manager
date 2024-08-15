@@ -1,1 +1,1 @@
-# Olympic_manager
+# Venue and Event Management System
