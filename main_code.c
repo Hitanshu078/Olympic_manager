@@ -41,13 +41,15 @@ void sortEvents(struct event events[], int total_events) {//to sort the events a
 int addvenue(const char *name, const char *location, int capacity) { 
     // To add a new venue
     if (counts >= MAX_VENUES) {
-        printf("-1\nError\n");
+        printf("-1\n");
+        printf("Error: Max number of venues has been added.\n");
         return 0;
     }
     for (int i = 0; i < counts; i++) { 
         // If the name is already present return error
         if (strcmp(venues[i].name, name) == 0) {
-            printf("-1\nError\n");
+            printf("-1\n");
+            printf("Error: Duplicate Venue\n");
             return 0;
         }
     }
@@ -75,7 +77,8 @@ int deletevenue(const char *name) {//to delete a venue
             return 0;
         }
     }
-    printf("-1\nError\n");
+    printf("-1\n");
+    printf("Error: Venue does not exist\n");
     return 0;
 }
 
@@ -94,28 +97,33 @@ int printvenue() {// to print a venue
 int addevent(const char *name, int date, int start, int end, const char *eventname) { 
     // To add an event in a venue
     if(end<=start || end>23 || start<0){
-        printf("-1\nError\n");
+        printf("-1\n");
+        printf("Error: Invalid time entered\n");
         return 0;
     }
     if(date>30 || date<0){
-        printf("-1\nError\n");
+        printf("-1\n");
+        printf("Error: Invalid date entered\n");
         return 0;
     }
     for (int i = 0; i < counts; i++) {
         if (strcmp(venues[i].name, name) == 0) { 
             // Searching if the assigned venue is present or not
             if (venues[i].total_events >= MAX_EVENTS) {
-                printf("-1\nError\n");
+                printf("-1\n");
+                printf("Error: Events limit reached\n");
                 return 0;
             }
             for(int j=0;j<venues[i].total_events;j++){
                 if(strcmp(venues[i].events[j].eventname,eventname)==0){
-                    printf("-1\nError\n");
+                    printf("-1\n");
+                    printf("Error:  Duplicate event\n");
                     return 0;
                 }
                 if (date == venues[i].events[j].date &&
     ((start < venues[i].events[j].ends && end > venues[i].events[j].start))) {
-    printf("-1\nError\n");
+    printf("-1\n");
+    printf("Error: Another event is plannned in the given time slot\n");
     return 0;
 }
 
@@ -135,7 +143,8 @@ int addevent(const char *name, int date, int start, int end, const char *eventna
             return 0;
         }
     }
-    printf("-1\nError\n");
+    printf("-1\n");
+    printf("Error: No such venue added\n");
     return 0;
 }
 
@@ -154,11 +163,13 @@ int deleteevent(const char *name, int date, int start, const char *eventname) {/
                     return 0;
                 }
             }
-            printf("-1\nError\n");
+            printf("-1\n");
+            printf("Error: No such event has been added\n");
             return 0;
         }
     }
-    printf("-1\nError\n");
+    printf("-1\n");
+    printf("Error: No such venue exists\n");
     return 0;
 }
 
@@ -223,7 +234,8 @@ int showCalendar(const char *name) {//this function will display all the events 
             return 0;
         }
     }
-    printf("-1\nError\n");
+    printf("-1\n");
+    printf("Error");
     return 0;
 }
 
@@ -244,14 +256,16 @@ int main() {
             if (sscanf(args, "\"%1000[^\"]\" \"%1000[^\"]\" %d", name, location, &capacity) == 3) {
                 addvenue(name, location, capacity);
             } else {
-                printf("-1\nError\n");
+                printf("-1\n");
+                printf("Error: Please enter correct input format for add venue");
             }
         } else if (strcmp(command, "delVenue") == 0) {
             char name[MAX_NAME_LEN + 1];
             if (sscanf(args, "\"%1000[^\"]\"", name) == 1) {
                 deletevenue(name);
             } else {
-                printf("-1\nError\n");
+                printf("-1\n");
+                printf("Error: Please enter correct input format for delete venue");
             }
         } else if (strcmp(command, "showVenues") == 0) {
             printvenue();
@@ -261,7 +275,8 @@ int main() {
             if (sscanf(args, "\"%1000[^\"]\" %d %d %d \"%1000[^\"]\"", name, &date, &start, &end, eventname) == 5) {
                 addevent(name, date, start, end, eventname);
             } else {
-                printf("-1\nError\n");
+                printf("-1\n");
+                printf("Error: Please enter correct input format for add event");
             }
         } else if (strcmp(command, "delEvent") == 0) {
             char name[MAX_NAME_LEN + 1], eventname[MAX_NAME_LEN + 1];
@@ -269,7 +284,8 @@ int main() {
             if (sscanf(args, "\"%1000[^\"]\" %d %d \"%1000[^\"]\"", name, &date, &start, eventname) == 4) {
                 deleteevent(name, date, start, eventname);
             } else {
-                printf("-1\nError\n");
+                printf("-1\n");
+                printf("Error: Please enter correct input format for delete event");
             }
         } else if (strcmp(command, "showEvents") == 0) {
             char name[MAX_NAME_LEN + 1];
@@ -277,14 +293,16 @@ int main() {
             if (sscanf(args, "\"%1000[^\"]\" %d", name, &date) == 2) {
                 showevents(name, date);
             } else {
-                printf("-1\nError\n");
+                printf("-1\n");
+                printf("Error: Please enter correct input format for show events");
             }
         } else if (strcmp(command, "showCalendar") == 0) {
             char name[MAX_NAME_LEN + 1];
             if (sscanf(args, "\"%1000[^\"]\"", name) == 1) {
                 showCalendar(name);
             } else {
-                printf("-1\nError\n");
+                printf("-1\n");
+                printf("Error: Please enter correct input format for showCalendar");
             }
         } else if (strcmp(command, "End") == 0) {
             break;
