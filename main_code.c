@@ -164,7 +164,7 @@ int deleteevent(const char *name, int date, int start, const char *eventname) {/
                 }
             }
             printf("-1\n");
-            printf("Error: No such event has been added\n");
+            printf("Error: no matching event(on date %d starting at hour %d)\n",date,start);
             return 0;
         }
     }
@@ -183,6 +183,10 @@ int showevents(const char *name, int date) {//to show all the events in a venue
                 if (venues[i].events[j].date == date) {
                     u++;
 		}
+	    }
+	    if(u==0){
+		printf("%d(no event on date %d\n",u,date);
+		return 0;
 	    }
 	    printf("%d\n",u);
             for (int j = 0; j < venues[i].total_events; j++) {//printing all the evnets in the venue on particular date
@@ -251,14 +255,31 @@ int main() {
         sscanf(line, "%19s %1000[^\n]", command, args);  // Extract the command and the arguments
 
         if (strcmp(command, "addVenue") == 0) {
-            char name[MAX_NAME_LEN + 1], location[MAX_NAME_LEN + 1];
-            int capacity;
-            if (sscanf(args, "\"%1000[^\"]\" \"%1000[^\"]\" %d", name, location, &capacity) == 3) {
-                addvenue(name, location, capacity);
-            } else {
-                printf("-1\n");
-                printf("Error: Please enter correct input format for add venue");
-            }
+    char name[MAX_NAME_LEN + 1], location[MAX_NAME_LEN + 1];
+    int capacity;
+
+    // Initialize variables to default values
+    name[0] = '\0';
+    location[0] = '\0';
+    capacity = -1;
+
+    int numScanned = sscanf(args, "\"%1000[^\"]\" \"%1000[^\"]\" %d", name, location, &capacity);
+
+    // Check each condition and print specific error messages
+    if (numScanned < 1 || name[0] == '\0') {
+        printf("-1\n");
+        printf("Error: Venue name is missing or incorrect format.\n");
+    } else if (numScanned < 2 || location[0] == '\0') {
+        printf("-1\n");
+        printf("Error: Location is missing or incorrect format.\n");
+    } else if (numScanned < 3 || capacity == -1) {
+        printf("-1\n");
+        printf("Error: Capacity is missing or incorrect format.\n");
+    } else {
+        // If all inputs are correct, add the venue
+        addvenue(name, location, capacity);
+    }
+
         } else if (strcmp(command, "delVenue") == 0) {
             char name[MAX_NAME_LEN + 1];
             if (sscanf(args, "\"%1000[^\"]\"", name) == 1) {
