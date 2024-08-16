@@ -120,16 +120,12 @@ int addevent(const char *name, int date, int start, int end, const char *eventna
                     printf("Error:  Duplicate event\n");
                     return 0;
                 }
-                if (date == venues[i].events[j].date &&
-    ((start < venues[i].events[j].ends && end > venues[i].events[j].start))) {
-    printf("-1\n");
-    printf("Error: Another event is plannned in the given time slot\n");
-    return 0;
-}
-
-
-
-            }
+                if (date == venues[i].events[j].date &&((start < venues[i].events[j].ends && end > venues[i].events[j].start))) {
+    			printf("-1\n");
+    			printf("Error: Another event is plannned in the given time slot\n");
+    			return 0;
+		}
+	    }
             struct event new_event; // Creating the struct event in the given venue
             new_event.date = date; // Assigning attributes to the event struct
             new_event.start = start;
