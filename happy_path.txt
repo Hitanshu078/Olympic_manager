@@ -1,0 +1,24 @@
+addCongregation "Tech Conference 2024" "Conference" "2024-10-01" "2024-10-05"
+addCongregation "Music Festival" "Concert" "2024-09-10" "2024-09-15"
+showCongregations
+addVenue "City Arena" "CityArena:City:State:12345:Country" 8000
+addVenue "Grand Hall" "GrandHall:City:State:12346:Country" 15000
+reserveVenue "City Arena" "Country" "Music Festival"
+reserveVenue "Grand Hall" "Country" "Tech Conference 2024"
+showReserved "Music Festival"
+showReserved "Tech Conference 2024"
+addEvent "Music Festival" "City Arena" "Country" "2024-09-12" "10:00" "12:00" "Opening Act"
+addEvent "Music Festival" "City Arena" "Country" "2024-09-12" "13:00" "15:00" "Headliner"
+addEvent "Tech Conference 2024" "Grand Hall" "Country" "2024-08-02" "09:00" "11:00" "Keynote Speech"
+showEvents "City Arena" "Country" "2024-09-12"
+showEvents "Grand Hall" "Country" "2024-08-02"
+freeVenue "City Arena" "Country" "Music Festival"
+showReserved "Music Festival"
+deleteEvent "Music Festival" "City Arena" "Country" "2024-09-12" "13:00" "Headliner"
+showEvents "City Arena" "Country" "2024-09-12"
+deleteVenue "City Arena" "Country"
+showVenues "City:State::Country"
+deleteCongregation "Tech Conference 2024"
+showCalendar "Music Festival" "City Arena" "Country"
+showCongregations
+End
