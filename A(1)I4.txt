@@ -1,0 +1,9 @@
+addVenue "Aquatics Centre" "Saint-Denis" 10000
+addVenue "Aquatics Centre" "Saint-Denis" 5000
+delVenue "Invalides"
+addVenue "Invalides" "Paris" 20000
+addVenue "Lyon Stadium" "Decines" 30000
+showVenues
+delVenue "Lyon Stadium"
+showVenues
+End

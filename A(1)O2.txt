@@ -1,0 +1,10 @@
+0
+0
+0
+0
+-1
+Error: No such venue added
+-1
+Error: No such venue exists
+-1
+Error: no matching event(on date 30 starting at hour 8)

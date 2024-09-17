@@ -1,0 +1,15 @@
+0
+-1
+Error: Duplicate Venue
+-1
+Error: Venue does not exist
+0
+0
+3
+Aquatics Centre Saint-Denis 10000
+Invalides Paris 20000
+Lyon Stadium Decines 30000
+0
+2
+Aquatics Centre Saint-Denis 10000
+Invalides Paris 20000

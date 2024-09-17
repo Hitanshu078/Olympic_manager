@@ -1,0 +1,8 @@
+showVenues
+addVenue "South Paris Arena" "Paris" 10000
+addEvent "South Paris Arena" 21 13 18 "Handball"
+addEvent "South Paris Arena" 27 14 19 "Table Tennis"
+addEvent "Pont Alexandre III" 30 2 4 "Volleyball"
+delEvent "Aquatics Centre" 30 8 "Water Polo"
+delEvent "South Paris Arena" 30 8 "Water Polo"
+End

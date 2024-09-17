@@ -1,0 +1,12 @@
+showVenues
+addVenue "La ConCorde" "Paris" 10000
+addVenue "Grand Palais" "Paris" 10000
+showVenues
+addEvent "La ConCorde" 11 6 12 "Basketball"
+addEvent "La ConCorde" 14 5 8 "Cycling"
+addEvent "La ConCorde" 11 8 10 "Skateboarding"
+showEvents "La ConCorde" 11
+delEvent "La ConCorde" 11 6 "Basketball"
+addEvent "La ConCorde" 11 8 10 "Skateboarding"
+showEvents "La ConCorde" 11
+End
