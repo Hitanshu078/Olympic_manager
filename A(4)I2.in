@@ -1,0 +1,22 @@
+addCongregation "US Open Tennis 2024" "Games" "2024-11-01" "2024-11-23"
+addCongregation "International Sports Convention 2024" "Convention" "2024-12-01" "2024-12-15"
+showCongregations
+addProgram "US Open Tennis 2024" "Ceremony" "Opening Ceremony" "2024-11-01" "2024-11-02"
+addProgram "US Open Tennis 2024" "Indoor games" "Qualifying Tennis Matches" "2024-11-03" "2024-11-07"
+addProgram "US Open Tennis 2024" "Indoor games" "Tennis Matches" "2024-11-10" "2024-11-20"
+showPrograms "US Open Tennis 2024"
+deleteProgram "US Open Tennis 2024" "Qualifying Tennis Matches"
+addProgram "US Open Tennis 2024" "Ceremony" "Closing Ceremony" "2024-11-22" "2024-11-23"
+showPrograms "US Open Tennis 2024"
+addVenue "Arthur Ashe Stadium" "Arthur Stadium:Flushing:New York:11368:USA" "Indoor Stadium" 50000
+addVenue "Paris stadium" "Paris Stadium:Paris:Ile-de-France:932100:France" "Outdoor Stadium" 20000
+showVenues ":::France"
+showVenues ":::USA" "Indoor Stadium"
+deleteVenue "Paris stadium" "France"
+showVenues ":::France"
+reserveVenue "Arthur Ashe Stadium" "USA" "US Open Tennis 2024" "Tennis Matches"
+showReserved "US Open Tennis 2024"
+freeVenue "Arthur Ashe Stadium" "USA" "US Open Tennis 2024" "Tennis Matches"
+deleteProgram "US Open Tennis 2024" "Tennis Matches"
+deleteCongregation "International Sports Convention 2024"
+End
