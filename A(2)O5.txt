@@ -1,0 +1,10 @@
+0
+0
+2
+Golf National Saint-Quentin-en-Yvelines 10000
+Nice Stadium Nice 30000
+-1
+Error: Invalid date entered
+0
+-1
+Error: Invalid time entered

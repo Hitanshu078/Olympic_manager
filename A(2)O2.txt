@@ -1,0 +1,16 @@
+0
+0
+0
+2
+La ConCorde Paris 10000
+Grand Palais Paris 10000
+0
+0
+-1
+Error: Another event is plannned in the given time slot
+1
+Basketball 6 12
+0
+0
+1
+Skateboarding 8 10
