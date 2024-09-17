@@ -1,0 +1,29 @@
+addCongregation "Paris Olympics 2024" "Games" "2024-07-01" "2024-06-28"
+addCongregation "Paris Olympics 2024" "Games" "2024-10-01" "2024-10-28"
+addCongregation "U-17 Football World cup" "Games" "2024-11-01" "2024-11-02"
+addCongregation "Summer fest" "Concert" "2024-11-01" "2024-11-05"
+showCongregations
+addVenue "Paris stadium" "ParisStadium:Paris:Ile-de-France:932100:France" 20000 
+addVenue "Lyon stadium" "LyonStadium:Lyon:Ile-de-France:932101:France" 10000
+addVenue "Parc des Princes" "FootballStadium:Paris:Ile-de-France:932102:France" 50000
+showVenues "Paris:Ile-de-France::France"
+reserveVenue "Paris stadium" "France" "Paris Olympics 2024"
+reserveVenue "Lyon stadium" "France" "Paris Olympics 2024"
+reserveVenue "Parc des Princes" "France" "U-17 Football World cup"
+showReserved "Paris Olympics 2024"
+freeVenue "Lyon stadium" "France" "Paris Olympics 2024"
+showReserved "Paris Olympics 2024"
+addEvent "Paris Olympics 2024" "Paris stadium" "France" "2024-10-01" "12:00" "15:00" "Javelin Throw"
+addEvent "Paris Olympics 2024" "Paris stadium" "France" "2024-10-01" "18:00" "21:00" "Pole Vault"
+addEvent "Paris Olympics 2024" "Paris stadium" "France" "2024-10-02" "12:00" "15:00" "5000m Mens"
+addEvent "U-17 Football World cup" "Parc des Princes" "France" "2024-11-02" "18:00" "21:00" "Spain vs England"
+showEvents "Paris stadium" "France" "2024-10-01" 
+showEvents "Parc des Princes" "France" "2024-11-02"
+deleteEvent  "Paris Olympics 2024" "Paris stadium" "France" "2024-10-01" "12:00" "Javelin Throw"
+showEvents "Paris stadium" "France" "2024-10-01"
+deleteVenue "Parc des Princes" "France"
+showCalendar "U-17 Football World cup" "Parc des Princes" "France"
+deleteCongregation "U-17 Football World cup"
+deleteVenue "Parc des Princes" "France"
+showCongregations
+End

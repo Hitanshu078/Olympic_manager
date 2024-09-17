@@ -1,0 +1,20 @@
+addCongregation "MadMax Tour India 2024" "Concert" "2024-07-26" "2024-07-29"
+addCongregation "Paris Olympics 2024" "Games" "2024-09-26" "2024-10-05"
+addCongregation "Justin Bieber Tour" "Concert" "2024-10-10" "2024-10-09"
+addCongregation "Summer Fest 2025" "Concert" "2025-06-01" "2025-06-15"
+addCongregation "G20 US 2026" "Convention" "2026-02-29" "2026-02-30"
+showCongregations
+addVenue "Stade de France" "Bandra-East:Saint-Denis:Ile-de-France:932100:France" 80000
+addVenue "Wembley Stadium" "Kormangala:London:England:HA9000:UK" 90000
+addVenue "Olympic Stadium" "JPNagar:Montreal:Quebec:H1V3N7:Canada" 60000
+showVenues "London:England::UK"
+reserveVenue "Stade de France" "France" "Paris Olympics 2024"
+reserveVenue "Wembley Stadium" "UK" "Paris Olympics 2024"
+showReserved "Mars Olympics 1985"
+showReserved "Paris Olympics 2024"
+addEvent "Paris Olympics 2024" "Stade de France" "France" "2024-09-27" "09:00" "11:00" "Opening Ceremony"
+addEvent "Paris Olympics 2024" "Stade de France" "France" "2024-09-27" "11:15" "13:30" "Athletics - Morning Session"
+addEvent "Paris Olympics 2024" "Stade de France" "France" "2024-09-27" "20:30" "23:45" "Athletics - Night Session"
+addEvent "Paris Olympics 2024" "Stade de France" "France" "2024-09-28" "00:00" "02:00" "Football - Quarter Final"
+showEvents "Stade de France" "France" "2024-09-27"
+End

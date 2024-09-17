@@ -1,0 +1,38 @@
+-1
+Error
+Date is in the past
+0
+-1
+Error
+End date is before start date
+0
+-1
+Error
+Date is not valid
+2
+Paris Olympics 2024 Games 2024-09-26 2024-10-05
+Summer Fest 2025 Concert 2025-06-01 2025-06-15
+0
+0
+0
+1
+Wembley Stadium Kormangala:London:England:HA9000:UK 90000
+0
+0
+-1
+Error
+Congregation cannot be found
+2
+Stade de France Bandra-East:Saint-Denis:Ile-de-France:932100:France 80000
+Wembley Stadium Kormangala:London:England:HA9000:UK 90000
+0
+-1
+Error
+There is an event in less than 30 minutes duration of ending or starting time
+0
+-1
+Error
+Time difference is less than 30 minutes
+2
+Opening Ceremony 09:00 11:00
+Athletics - Night Session 20:30 23:45

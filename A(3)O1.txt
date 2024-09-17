@@ -1,0 +1,48 @@
+-1
+Error
+End date is before start date
+-1
+Error
+Date is not valid
+0
+0
+0
+-1
+Error
+Duplicate venue being added
+0
+0
+-1
+Error
+Venue is reserved
+0
+1
+City Arena CityArena:City:State:12345:Country 8000
+1
+Grand Hall GrandHall:City:State:12346:Country 15000
+0
+-1
+Error
+There is an event in less than 30 minutes duration of ending or starting time
+0
+1
+Opening Act 10:00 12:00
+1
+Keynote Speech 09:00 11:00
+-1
+Error
+Event does not exists
+-1
+Error
+Venue does not exists
+-1
+Error
+Congregation does not exists
+0
+-1
+Error
+Venue is not reserved
+0
+-1
+Error
+Venue does not exists

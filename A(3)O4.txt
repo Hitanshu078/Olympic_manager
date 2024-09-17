@@ -1,0 +1,49 @@
+-1
+Error
+End date is before start date
+0
+0
+0
+3
+Paris Olympics 2024 Games 2024-10-01 2024-10-28
+U-17 Football World cup Games 2024-11-01 2024-11-02
+Summer fest Concert 2024-11-01 2024-11-05
+0
+0
+0
+2
+Paris stadium ParisStadium:Paris:Ile-de-France:932100:France 20000
+Parc des Princes FootballStadium:Paris:Ile-de-France:932102:France 50000
+0
+0
+0
+2
+Paris stadium ParisStadium:Paris:Ile-de-France:932100:France 20000
+Lyon stadium LyonStadium:Lyon:Ile-de-France:932101:France 10000
+0
+1
+Paris stadium ParisStadium:Paris:Ile-de-France:932100:France 20000
+0
+0
+0
+0
+2
+Javelin Throw 12:00 15:00
+Pole Vault 18:00 21:00
+1
+Spain vs England 18:00 21:00
+0
+1
+Pole Vault 18:00 21:00
+-1
+Error
+Venue does not exists
+1
+2024-11-01 0
+2024-11-02 1
+Spain vs England 18:00 21:00
+0
+0
+2
+Paris Olympics 2024 Games 2024-10-01 2024-10-28
+Summer fest Concert 2024-11-01 2024-11-05
